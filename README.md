@@ -28,7 +28,7 @@ O objetivo do **HarriPathing** é democratizar a programação autônoma. Ele pe
 1.  **📍 Sistema de Grid (Grade):** A arena é mapeada em IDs simples (ex: 1 a 144). Você comanda: *"Vá para o quadrado 55"* e a biblioteca resolve a posição real.
 2.  **🚧 Desvio de Obstáculos (Pathfinding):** Defina quais quadrados estão bloqueados (paredes, robôs aliados, elementos de jogo). O algoritmo **A*** calculará automaticamente a rota mais curta desviando dos bloqueios.
 3.  **↪️ Gerador de Curvas:** Crie movimentos circulares perfeitos. Defina o raio, ângulo inicial e final, e o HarriPath gera os *waypoints* para uma curva suave.
-4.  **🖥️ HarriVisualizer (Novo!):** Uma ferramenta HTML/JS inclusa que permite desenhar sua rota clicando na tela e **gera o código Java automaticamente**.
+4.  **🖥️ HarriVisualizer:** Uma ferramenta HTML/JS inclusa que permite desenhar sua rota clicando na tela e **gera o código Java automaticamente**.
 5.  **🤖 Suporte Híbrido:** Algoritmos dedicados tanto para **Mecanum Drive** (Holonômico) quanto para **Tank Drive** (Diferencial Inteligente).
 
 ---
@@ -61,8 +61,11 @@ grid.addObstacle(58); // Ex: Uma barreira no meio do campo
 2. Criando Rotas (3 Métodos)
 Você pode misturar comandos manuais, curvas e busca automática.
 
-Java
+````
+## 2. Criando Rotas (3 Métodos)
+Você pode misturar comandos manuais, curvas e busca automática.
 
+```java
 // A. Adicionar pontos manualmente
 path.add(10); 
 path.add(22);
@@ -74,9 +77,10 @@ path.addCurve(0, 0, 24, 0, 90, 5);
 // C. Pathfinding Automático (A*)
 // "Encontre o caminho do quadrado atual até o 140, desviando dos obstáculos"
 path.makePath(path.getLastID(), 140);
+````
 
-3. Executando no Loop (TeleOp ou Autônomo)
-Java
+## 3. Executando no Loop (TeleOp ou Autônomo)
+```java
 
 // No seu loop while(opModeIsActive()):
 
@@ -96,6 +100,7 @@ if (!path.isFinished()) {
 } else {
     robot.stop();
 }
+````
 
 # 🎨 HarriVisualizer
 O projeto inclui o arquivo visualizer.html.
