@@ -15,7 +15,7 @@ HarriPathing é uma solução de navegação para FTC, criada para simplificar o
 
 Esta biblioteca foi desenvolvida por **Harrison Matheus Felix Bernardino**.
 
-* **Equipe:** [CLUSTERS #16053](https://instagram.com/sesiclusters)
+* **Equipe:** [CLUSTERS #16053](https://instagram.com/clusters_ftc)
 * **Escola:** Sesi Senai Parangaba (Fortaleza/CE)
 * **Temporada:** DECODE (2025/2026)
 
